@@ -2,6 +2,8 @@
 // Got the solution but it's slow
 //Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. 
 
+// Time complexity: O(n)
+// Space complexity: O(1)
 class Solution {
 	func maxSubArray(_ nums: [Int]) -> Int {
 
@@ -30,6 +32,8 @@ print("RESULTADO: \(solution.maxSubArray(input))")
 
 // Future me, this gotta be the slowest solution but it works, just in case you are desperate
 
+//Time complexity: O(n^3)
+//Space complexity: O(1)
 //class Solution {
 //	func maxSubArray(_ nums: [Int]) -> Int {
 //
