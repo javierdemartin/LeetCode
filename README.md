@@ -23,4 +23,4 @@ Yes, I am doing this. Gotta get a job and practice this.
 | Problem | Solution | Difficulty | Time | Space |
 |---------|----------|------------|------|-------|
 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) |  | Easy | O(n) | O(1) |
-[ [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/solution/)] | Easy | O(n) | O(1) |
+[ [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/solution/) | | Easy | O(n) | O(1) |
