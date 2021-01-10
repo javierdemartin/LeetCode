@@ -5,36 +5,38 @@ import Foundation
 class Solution {
     func wordPattern(_ pattern: String, _ s: String) -> Bool {
         
-        let str = s.components(separatedBy: " ")
-        var pattern = Array(pattern)
-        var mappingPatternToWord = [Character: String]()
+        var matchingParam: [Character: String] = [:]
         
-        if str.count != pattern.count { return false }
+        let pattern = Array(pattern)
+        let s = s.components(separatedBy: " ")
         
-        for index in str.indices {
-            
-            if let existingPattern = mappingPatternToWord[pattern[index]] {
-                if existingPattern != str[index] { return false }
+        if pattern.count != s.count {
+            return false
+        }
+        
+        for i in 0..<pattern.count {
+            // Word already exists in the HashTable (a -> dog)
+            if let word = matchingParam[pattern[i]] {
+                // If the word in the HashTable doesn't match the one
+                // at the position in the array of words it's a mismatch
+                if word != s[i] { return false }
+                
             } else {
-                // Pattern does not exist in the array
-                if !mappingPatternToWord.values.contains(str[index]) {
-                    mappingPatternToWord[pattern[index]] = str[index]
-                } else {
+                // New word to be added to the HashTable
+                if !matchingParam.values.contains(s[i]) {
+                    matchingParam[pattern[i]] = s[i]
+                }
+                // Mismatch, the word doesn't match the key
+                else {
                     return false
                 }
             }
-            
-            
-            print(mappingPatternToWord)
         }
+      
         
         return true
     }
 }
 
-let s = Solution()
-s.wordPattern("abba", "dog cat cat dog") // true
-s.wordPattern("abba", "dog cat cat fish") // false
-s.wordPattern("aaaa", "dog cat cat dog") // false
-s.wordPattern("abba", "dog dog dog dog") // false
+Solution().wordPattern("abba", "dog cata cat dog")
 
