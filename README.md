@@ -1,9 +1,19 @@
+<details>
+  <summary>Details</summary>
+  
+
+</details>
+
+
 ### Arrays
 
 An array is a collection of items stored in neighboring (contiguous) memory location. As they are stored together, checking through the entire collection of items is straightforward.
 
 * [Boyer-Moore algorithm](https://en.wikipedia.org/wiki/Boyer–Moore_majority_vote_algorithm): Find the majority of a sequence using linear time and constant space.
 
+<details>
+  <summary>Details</summary>
+  
 ```swift
 var count = 0
 var candidate: Int? = nil
@@ -22,6 +32,7 @@ for num in nums {
 
 return candidate!
 ```
+</details>
 
 * Rotate a matrix: Transpose and shift the columns
 
@@ -29,7 +40,10 @@ return candidate!
 
 * [Sieve of Erathostenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes): Algorithm to find all prime numbers up to any given limit.
 
-```swift
+<details>
+  <summary>Details</summary>
+  
+  ```swift
 var primes = Array(repeating: false, count: n)
 
 for i in 2..<n {
@@ -50,9 +64,14 @@ for i in 2..<n {
 }
 ```
 
+</details>
+
 * Calculate the Nth root of a given number using [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method)
 
-```swift
+<details>
+  <summary>Details</summary>
+  
+  ```swift
 func root(x: Double, n: Double) -> Double {
     
     /// Maximum error we're allow to have
@@ -77,6 +96,8 @@ func root(x: Double, n: Double) -> Double {
     return approximation
 }
 ```
+
+</details>
 
 ### Bit Manipulation
 
@@ -103,7 +124,10 @@ func root(x: Double, n: Double) -> Double {
 
 **Find power of two**
 
-```swift
+<details>
+  <summary>Details</summary>
+  
+  ```swift
 /**
  A power of to will have 1s followed by some zeros. It won't be a power of two if it has more than 1-bits
  
@@ -151,6 +175,8 @@ func isPowerOfTwo(_ n: Int) -> Bool {
 }
 ```
 
+</details>
+
 #### Tricks
 
 * **Get bit**: Get the Nth bit of a number, `NUMBER & (1 << N) != 0`
@@ -192,6 +218,9 @@ XOR (`^`) outputs a `1` if both inputs are different. It's an exclusive operatio
 
 **Swap to values x and y in-place.**
 
+<details>
+  <summary>Details</summary>
+
 ```
 var x = 5
 var y = 2
@@ -203,13 +232,19 @@ x ^= y # => (x ^ y ^ x, x)      = (y, x)
 
 // x is now y (2)
 // y is now x (5)
-```
+```  
+
+</details>
+
 --------------
 
 **Find a missing number**
 
 > You are given an array A of n - 1 integers which are in the range between 1 and n. All numbers appear exactly once, except one number, which is missing. Find this missing number.
 
+<details>
+  <summary>Details</summary>
+  
 ```swift
 func findMissing(_ array: [Int], _ range: Int) -> Int {
     
@@ -228,6 +263,8 @@ func findMissing(_ array: [Int], _ range: Int) -> Int {
 
 findMissing([1,2,3,4,6], 6) // 5
 ```
+
+</details>
 
 This operation can also be generalized to use arithmetic operators instead of XOR. This adds potential integers and then substract the ones actually appearing.
 
@@ -276,45 +313,65 @@ IMPLEMENTATION
 * Hamming Distance
 * Pascal's triangle
 
-
 ### Queues & Stacks
 
 * **Queue** processes in First-in-First-out (supermarket queue)
-* **Stack** process in Last-in-First-out (dishpile)
+* **Stack** process in Last-in-First-out (dish pile)
+
+#### Stack
+
+Uses LIFO ordering and it uses the following operations:
+
+* `pop()`: Remove the top item from the stack
+* `push(item)`: Add an item to the top of the stack
+* `peek()`: Return the top of the stack
+* `isEmpty()`: Return true if and only if the stack is empty
+
+Unlike an array, **a stack does not offer constant time-access to the ith item**. If does allow constant time adds and removes ad it doesn't require shifting elements.
+
+**Stacks are  useful in certain recursive algorithms**. You push temporary data onto a stack as you recurse but then remove them as you **backtrack**.
+
+Can be implemented using a linked list  if items are added and removed from the same side.
 
 #### Queue
 
+Uses FIFO ordering and it uses the following operations:
+
+* `add(item)`: Add an item to the end of the queue
+* `remove()`: Remove the first item in the queue
+* `peek()`: Return the top of the queue
+* `isEmpty`: Return true if and only if the queue is empty
+
+Can be implemented with a linked list as long items are added and removed from opposite sides.
+
 Inserts (enqueue) adds the element to the end of the queue.
 
-* `enqueue` appends a new element to the queue
-* `dequeue` removes the first element
-
-It needs an index to indicate the starting point.
-
+<details>
+  <summary>Implementation</summary>
+  
 ```swift
 struct Queue<T> {
-  private var elements: [T] = []
-
-  mutating func enqueue(_ value: T) {
-    elements.append(value)
-  }
-
-  mutating func dequeue() -> T? {
-    guard !elements.isEmpty else { 
-      return nil
+    private var elements: [T] = []
+    
+    mutating func enqueue(_ value: T) {
+        elements.append(value)
     }
-    return elements.removeFirst()
-  }
-
-  var head: T? {
-    return elements.first
-  }
-
-  var tail: T? {
-    return elements.last
-  }
+    
+    mutating func dequeue() -> T? {
+        guard !elements.isEmpty else { return nil }
+        
+        return elements.removeFirst()
+    }
+    
+    var head: T? { return elements.first }
+     
+    var tail: T? { return elements.last }
 }
 ```
+
+</details>
+
+Used in breadth-first search or implemented a cache.
 
 ##### Circular Queue
 
@@ -323,21 +380,129 @@ Using a **fixed-size array** and **two pointers** to indicate the starting and e
 
 ### Trees
 
-#### Tree
+A tree is a data structure composed of nodes.
+
+1. Each tree has a **root node**.
+2. The root node has zero or more child nodes.
+3. Each child nod has zero or more child nodes.
+
+<details>
+  <summary>Implementation</summary>
+public class TreeNode {
+    public var val: Int
+    public var left: TreeNode?
+    public var right: TreeNode?
+    public init() { self.val = 0; self.left = nil; self.right = nil; }
+    public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+    public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+        self.val = val
+        self.left = left
+        self.right = right
+    }
+}
+</details>
+
+A **binary tree** is a tree in which each node has up to two children. Not all trees are binary rees.
+
+A **binary search tree** is a binary tree in which every node fits a specific ordering property. All left descendesnts are less than or equal to the current node, which is less than the right descendents.
+
+```
+
+
+    8           8
+   / \         / \
+  4  10       4  10
+ / \   \     / \   \
+2   6  20	2  12   20	
+```
+
+**Balanced vs unbalanced tree**. A balanced tree does not mean both left and right subtrees are exactly the same size.
+
+**Complete binary trees**  Every level of the tree is fully filed, except for perhaphs the last level. To the extent that the last level is filled, it is filled from left to right.
+
+<details>
+  <summary>Example</summary>  
+```
+Not complete   Complete
+Binary Tree    Binary Tree
+    8            8
+   / \          / \
+  4  10       4    10
+ / \   \     / \   /
+2   6  20	2  12 15	
+```
+</details>
+
+**Full binary tree**: Every note has either zero or two children. No nodes have only one child.
+
+**Perfect binary tree**: All interior nodes have two children and all leaf nodes are at the same level.
+
+#### Binary Tree Traversal
 
 General strategies to traverse a tree:
 
 * Depth First Search (DFS): Adop **depth** as the priority, so that one would start from a root and reach all the way down to a certain leaf, and then back to root to reach another branch. Can be further distinguished into three more orders depending on the relative order amongh the root, left and right nodes.
     * Preorder: `root.val + preorder(root.left) + preorder(root.right)`
-    * Inorder: `inorder(root.left) + root.val + inorder(root.right)`
+    * Inorder: `inorder(root.left) + root.val + inorder(root.right)`. Visit the left branch, then the current node, and finally the right branch. 
     * Postorder: `posorder(root.left) + postorder(root.right) + root.val`
+    
+
+
 * Breadth First Search (BFS): Scan the tree level by level. Following the order of height, from top to bottom. The nodes on higher level will be visited before the ones with lower levels. Common approach to solve this is to use a queue.
 
-#### Binary Tree
+<details>
+  <summary>In-order traversal</summary>
+```swift
+func inOrderTraversal(node: TreeNode) {
+	if node != nil {
+		inOrderTraversal(node.left)
+		print("\(node.val)")
+		inOrderTraversal(node.right)
+	}
+}
+```
+</details>
 
-#### Binary Search Tree (BST)
+<details>
+  <summary>Pre-order</summary>
+  
+```swift
+func preOrderTraversal(node: TreeNode) {
+	if node != nil {
+		print("\(node.val)")
+		preOrderTraversal(node.left)
+		preOrderTraversal(node.right)
+	}
+}
+```
+</details>
 
-A binary tree that orders its nodes in a way that allows fast queries.
+<details>
+  <summary>Post-order</summary>
+```swift
+func postOrderTraversal(node: TreeNode) {
+	if node != nil {
+		postOrderTraversal(node.left)
+		postOrderTraversal(node.right)
+		print("\(node.val)")
+	}
+}
+```
+</details>
+
+A **min-heap** is a complete binary tree where each node is smaller than its children. The root is the minimum element in the tree.
+
+```
+
+
+     4           
+   /   \      
+  50    7     
+ / \   /   
+55 90 87
+```
+
+Two key operations on a min-heap: insert and extact\_min.
 
 ### Resources 
 
