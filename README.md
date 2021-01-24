@@ -36,6 +36,37 @@ return candidate!
 
 * Rotate a matrix: Transpose and shift the columns
 
+
+<details>
+  <summary>Multiply two matrices</summary>
+  
+  ```swift
+class Solution {
+    func multiply(_ A: [[Int]], _ B: [[Int]]) -> [[Int]] {
+        
+        var AB = Array(repeating: Array(repeating: 0, count: B[0].count), count: A.count)
+        
+        for aRow in 0..<A.count {
+            
+            for aCol in 0..<A[0].count {
+                
+                for bCol in 0..<B[0].count {
+                    AB[aRow][bCol] += A[aRow][aCol] * B[aCol][bCol]
+                }
+                
+            }
+            
+            
+        }
+        
+        return AB
+    }
+}
+```
+
+</details>
+
+
 ### Maths
 
 * [Sieve of Erathostenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes): Algorithm to find all prime numbers up to any given limit.
@@ -216,10 +247,8 @@ XOR (`^`) outputs a `1` if both inputs are different. It's an exclusive operatio
 
 --------------
 
-**Swap to values x and y in-place.**
-
 <details>
-  <summary>Details</summary>
+  <summary>**Swap to values x and y in-place.**</summary>
 
 ```
 var x = 5
