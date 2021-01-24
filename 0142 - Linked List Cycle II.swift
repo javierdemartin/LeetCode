@@ -17,7 +17,37 @@ public class ListNode {
  By using a set that contains each node's pointer in memory we can check if a cycle exists as when a new node's pointer is not inserted into the set because it's already there.
  */
 class Solution {
+    
+    /**
+     space-complexity: O(1)
+     time-complexity: O(N)
+     */
     func detectCycle(_ head: ListNode?) -> ListNode? {
+        
+        var fast: ListNode? = head
+        var slow: ListNode? = head
+        
+        while fast != nil {
+            slow = slow?.next
+            fast = fast?.next?.next
+            
+            if slow === fast { break }
+        }
+        
+        if fast == nil { return nil }
+        
+        slow = head
+        
+        while slow !== fast {
+            slow = slow?.next
+            fast = fast?.next
+        }
+        
+        return slow
+        
+    }
+    
+    func detectCycle2(_ head: ListNode?) -> ListNode? {
         
         var visits: Set<UnsafeMutableRawPointer> = []
         
@@ -47,3 +77,5 @@ l3.next = l4
 l4.next = l2
 
 Solution().detectCycle(l1)
+
+
