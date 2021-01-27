@@ -2,6 +2,8 @@
 
 import Foundation
 
+
+
 public class ListNode {
     public var val: Int
     public var next: ListNode?
@@ -10,45 +12,51 @@ public class ListNode {
     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+/**
+ A brute force solution would be to calculate the depth of the given list and then perform the operation. That operation
+ needs multiple passes over the list to perform the operation but it's a valid solution.
+ 
+ An improved solution involves using two pointers.
+ 
+ * First pointer advanced `n + 1` from the beginning
+ * Second pointer starts from the beginning of the list
+ 
+ This causes that these two pointers are separated `n` nodes apart.
+ 
+ By cycling the linked list until the first pointer reaches the end the second pointer will have stopped at the `nth` node counting from the end.
+ 
+ Relink the next pointer of the next node to pointe to the node's next next node.
+ 
+ Time complexity: O(N)
+ Space complexity: O(1)
+ */
+
 class Solution {
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
         
-        // "Backup"
-        var dummy: ListNode? = ListNode(0, head)
-        // Used in the first pass to know the depth of the Linked List
-        var first = head
-        var depth = 0
+        var dummy: ListNode? = ListNode(0)
+        dummy?.next = head
         
-        // First pass to know the depth of the Linked List
-        while first != nil {
-            depth += 1;
-            first = first?.next
+        var node = dummy
+        var ahead = dummy
+        
+        for _ in 0..<n {
+            ahead = ahead?.next
         }
         
-        print("Depth \(depth)")
-        
-        // Substract the Nth node we want to be deleted
-        depth -= n
-        
-        // Set a pointer to the dummy node
-        first = dummy
-    
-        // Move the pointer until it reaches L-n
-        while depth > 0 {
-            depth -= 1
-            first = first?.next
+        while ahead?.next != nil {
+            node = node?.next
+            ahead = ahead?.next
         }
         
-        // Skip the L-Nth element we wanted to delete
-        first?.next = first?.next?.next
         
-        return dummy?.next
+        node?.next = node?.next?.next
+        
+        return dummy!.next
     }
 }
 
-let tree = ListNode(1,ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
-//let tree = ListNode(1,ListNode(2))
+let tree = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
 
-let s = Solution()
-s.removeNthFromEnd(tree, 2)
+Solution().removeNthFromEnd(tree, 2)
 
