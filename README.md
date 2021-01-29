@@ -1,8 +1,24 @@
+
+[ ] How to transform break a cricle in  alinked list
+
 <details>
   <summary>Details</summary>
   
 
 </details>
+
+<details>
+  <summary>Problem Outline</summary>
+  
+  
+
+</details>
+
+| Problem  | Category  | Difficulty  | Link  | 
+|---|---|---|---|
+| [0001 - Two Sum](https://leetcode.com/problems/two-sum/)  |  Array, Hash Table |  Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0001%20-%20Two%20Sum.swift)  |
+|   |   |   |   | 
+|   |   |   |   | 
 
 
 ### Arrays
@@ -34,13 +50,55 @@ return candidate!
 ```
 </details>
 
+<details>
+  <summary>Shift array to the left</summary>
+  
+```swift
+func shiftArrayToTheLeft(_ array: inout [Int], _ times: Int) {
+    
+    let times = times & array.count
+    
+    for _ in 0..<times {
+        for i in 0..<(array.count - 1) {
+            let temp = array[i+1]
+            array[i+1] = array[i]
+            array[i] = temp
+        }
+    }
+}
+```  
+
+</details>
+
+
+<details>
+  <summary>Shift array to the right</summary>
+  
+```swift
+func shiftArrayToTheRight(_ array: inout [Int], _ times: Int) {
+    
+    for _ in 0..<times {
+        
+        let end = array[array.count - 1]
+        
+        for i in (1..<array.count).reversed() {
+            array[i] = array[i - 1]
+        }
+        
+        array[0] = end
+    }
+}
+```
+
+</details>
+
 * Rotate a matrix: Transpose and shift the columns
 
 
 <details>
   <summary>Multiply two matrices</summary>
   
-  ```swift
+```swift
 class Solution {
     func multiply(_ A: [[Int]], _ B: [[Int]]) -> [[Int]] {
         
@@ -342,6 +400,64 @@ IMPLEMENTATION
 * Hamming Distance
 * Pascal's triangle
 
+### Linked List
+
+<details>
+  <summary>Detecting a loop using pointers</summary>
+  
+```swift
+func detectCycle(_ head: ListNode?) -> ListNode? {
+        
+        var visits: Set<UnsafeMutableRawPointer> = []
+        
+        var head = head
+        
+        while head != nil {
+            
+            if !visits.insert(Unmanaged.passUnretained(head!).toOpaque()).inserted {
+                return head
+            }
+            
+            head = head?.next
+        }
+        
+        return nil
+    }
+```
+
+</details>
+
+
+<details>
+  <summary>Detecting a loop using fast and slow nodes</summary>
+  
+```swift
+
+```
+
+</details>
+
+<details>
+  <summary>Converting a list to a looped list</summary>
+  
+```swift
+var tail = head
+
+/// Move the pointer to the last node of the list
+while tail?.next != nil {
+    tail = tail?.next
+}
+
+/// `tail` pointer is now pointing to the end of `head`
+/// By pointing the last element of `head` to the start of `head`
+/// A circle/infinite list is creating a loop from the last node to the first one
+tail?.next = head
+```
+
+</details>
+
+
+
 ### Queues & Stacks
 
 * **Queue** processes in First-in-First-out (supermarket queue)
@@ -480,7 +596,46 @@ General strategies to traverse a tree:
 * Breadth First Search (BFS): Scan the tree level by level. Following the order of height, from top to bottom. The nodes on higher level will be visited before the ones with lower levels. Common approach to solve this is to use a queue.
 
 <details>
+  <summary>Breadth First Search</summary>
+  
+```swift
+class Solution {
+    func levelOrderBottom(_ root: TreeNode?) -> [[Int]] {
+        
+        var treeValues: [[Int]] = []
+        
+        bfsTraverseTopToBottom(&treeValues, root, 0)
+        
+        return treeValues.reversed()
+    }
+    
+    func bfsTraverseTopToBottom(_ depthLevels: inout [[Int]], _ tree: TreeNode?, _ level: Int) {
+        
+        if tree == nil { return }
+        
+        if level == depthLevels.count {
+            depthLevels.append([])
+        }
+        
+        depthLevels[level].append(tree!.val)
+        
+        if tree?.left != nil {
+            bfsTraverseTopToBottom(&depthLevels, tree?.left, level + 1)
+        }
+        
+        if tree?.right != nil {
+            bfsTraverseTopToBottom(&depthLevels, tree?.right, level + 1)
+        }
+    }
+}
+```
+</details>
+
+
+
+<details>
   <summary>In-order traversal</summary>
+  
 ```swift
 func inOrderTraversal(node: TreeNode) {
 	if node != nil {
@@ -508,6 +663,7 @@ func preOrderTraversal(node: TreeNode) {
 
 <details>
   <summary>Post-order</summary>
+  
 ```swift
 func postOrderTraversal(node: TreeNode) {
 	if node != nil {
@@ -531,8 +687,51 @@ A **min-heap** is a complete binary tree where each node is smaller than its chi
 55 90 87
 ```
 
+<details>
+  <summary>Invert a binary tree</summary>
+```swift
+func invertTree(_ root: TreeNode?) -> TreeNode? {
+        
+        if root == nil { return nil}
+        
+        let right = invertTree(root?.right)
+        let left = invertTree(root?.left)
+        root?.left = right
+        root?.right = left
+        
+        return root
+    }
+```
+
+</details>
+
 Two key operations on a min-heap: insert and extact\_min.
+
+### Recursion and Dynamic Programming
+
+Recursive solutions are built off of solutions to subproblems
+
+* **Bottom-up approach**: Know how to solve the problem for a simple case. Then figure out how to solve it for a more complex case.
+* **Top-down approach**: Think about how you can divide de problem  for case N into supbproblems
+
+### Sorting and Searching
+
+Bubble sort
+
+Selection Sort
+
+Merge Sort
+
+Quick sort
+
+Radix Sort
+
+Binary search
 
 ### Resources 
 
 * [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club) from Ray Wenderlich
+* [Cracking the Coding Interview](https://www.goodreads.com/book/show/54845619-cracking-the-coding-interview) by Gayle Laakmann McDowell
+* [VisuAlgo](https://visualgo.net/en), visualising data structures and algorithms through animations
+* [Algorithms playlist](https://www.youtube.com/watch?v=KEEKn7Me-ms&list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL) from HackerRank's YouTube channel
+* [Data Structures playlist](https://www.youtube.com/watch?v=IhJGJG-9Dx8&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX) from HackerRank's YouTube channel
