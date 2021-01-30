@@ -2,37 +2,39 @@
 
 import Foundation
 
+/**
+ 
+ Use a recursive function `helper`that takes two pointers.
+ 
+ 1. If `left >= right` the pointers have reached the middle which marks the end of the recursion
+ 2. Switch left/right positions
+ 
+ Time complexity: O(N) time to perform N/2 iterations
+ Space complexity: O(N) to keep the recursion stack
+ */
 class Solution {
     
     func reverseString(_ s: inout [Character]) {
         
-        var left = 0
-        var right = s.count - 1
-        
-        while left <= right {
-            
-            let temp = s[right]
-            s[right] = s[left]
-            s[left] = temp
-            
-            left += 1
-            right -= 1
-        }
+        helper(0, s.count - 1, &s)
     }
     
-    // This is actually slower but simpler to read
-    func reverseString2(_ s: inout [Character]) {
+    func helper(_ left: Int, _ right: Int, _ s: inout [Character]) {
         
-        for i in (0..<s.count).reversed() {
-            s.append(s[i])
-            s.remove(at: i)
-        }
+        /// Condition to stop the recursion loop
+        if left >= right { return }
+        
+        let temp = s[left]
+        s[left] = s[right]
+        s[right] = temp
+        
+        helper(left + 1, right - 1, &s)
     }
 }
 
-let s = Solution()
-var toReverse: [Character] =  ["H","a","n","n","a","h"]
-//s.reverseString(&toReverse)
-s.reverseString2(&toReverse)
-print(toReverse)
+var s = Array("hola adios")
+
+Solution().reverseString(&s)
+
+print(s)
 
