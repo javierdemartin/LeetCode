@@ -4,57 +4,47 @@ import Foundation
 
 /**
  Slight modification to the 3sum problem with some overhead added.
+ This approach is going to use two pointers and the help of another one that will act as an anchor. Algorithm consists of moving
+ the two opposite pointers starting from the anchor to the right side.
  
- Time complexity: O(N^2)
- Space complexity: O(N)
+ Store in a variable, `diff` tha minimum difference calculated on each iteration. Initialize it to a huge value and the returned value
+ will be the target value minus the minimum difference calculated on a step.
+ 
+ Time complexity: O(N^2). Using two nested loops to traverse the array.
+ Space complexity: O(N) or O(N log N) depending on the sorting algorithm
  */
 class Solution {
     func threeSumClosest(_ nums: [Int], _ target: Int) -> Int {
         
         let nums = nums.sorted()
         
-        var sums = [Int]()
+        var diff = Int.max
+        
         
         for i in 0..<nums.count {
-            twoSumMod(nums, i, target, &sums)
-        }
-        
-        var closestDif = 999999
-        var indexClosest = -1
-        
-        for (i,v) in sums.enumerated() {
+            var lo = i + 1
+            var hi = nums.count - 1
             
-            if abs(v-target) < closestDif {
-                closestDif = abs(v - target)
-                indexClosest = i
-            }
-        }
-        
-        return sums[indexClosest]
-    }
-    
-    func twoSumMod(_ nums: [Int], _ i: Int, _ target: Int, _ sums: inout [Int]){
-        
-        var lo = i + 1
-        var hi = nums.count - 1
-        
-        while lo < hi {
-            
-            let sum = nums[i] + nums[lo] + nums[hi]
-            
-            /// Append sums anyway, we'll compare them later on
-            sums.append(sum)
-            
-            if sum == target {
-                lo += 1
-                hi -= 1
+            while lo < hi {
                 
-            } else if sum < target {
-                lo += 1
-            } else if sum > target {
-                hi -= 1
+                let sum = nums[i] + nums[lo] + nums[hi]
+                
+                /// Append sums anyway, we'll compare them later on
+                if abs(target - sum) < abs(diff) {
+                    diff = target - sum
+                }
+                
+                if sum < target {
+                    lo += 1
+                } else {
+                    hi -= 1
+                }
             }
         }
+        
+        return target - diff
     }
 }
+
+Solution().threeSumClosest([-1,2,1,-4], 1)
 
