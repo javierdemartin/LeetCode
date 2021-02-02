@@ -10,53 +10,54 @@ public class ListNode {
     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+/**
+ Create a new linked list which is going to store the solution and moving a dummy pointer to it while iterating both input lists.
+ Take into the account the possible carry on each step and also in the end.
+ 
+ Time complexity: O(max(M,N)), linear with the inputs
+ Space Complexity: O(max(M,N)), linear with the inputs
+ */
 class Solution {
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         
-        var dummy: ListNode? = ListNode(0)
-        var one = l1, two = l2
-        
-        var curr: ListNode? = dummy
+        var l1 = l1, l2 = l2
+        let dummy: ListNode? = ListNode(0)
+        var head: ListNode? = dummy
         
         var carry = 0
         
-        while one != nil || two != nil {
-            let x = one != nil ? one!.val : 0
-            let y = two != nil ? two!.val : 0
+        while l1 != nil || l2 != nil {
             
+            let x = l1 != nil ? l1!.val : 0
+            let y = l2 != nil ? l2!.val : 0
+            
+            print("Adding \(x) and \(y) with \(carry)")
             let sum = x + y + carry
+            
             
             carry = sum / 10
             
-            curr!.next = ListNode(sum % 10)
-            curr = curr!.next // Advance
+            head!.next = ListNode(sum % 10)
+            head = head!.next
             
-            one = one?.next
-            two = two?.next
+            l1 = l1?.next
+            l2 = l2?.next
         }
         
+        
+        /// Add the possible carry
         if carry > 0 {
-            curr?.next = ListNode(carry)
+            head?.next = ListNode(carry)
         }
-
-        return dummy!.next
+        
+        return dummy?.next
     }
     
-    func addNode(_ h: ListNode?, _ val: Int) {
-        
-        var h = h
-        
-        while h?.next != nil {
-            h = h!.next
-        }
-        
-        h?.next = ListNode(val)
-    }
 }
+
 
 let a = ListNode(2, ListNode(4, ListNode(3)))
 let b = ListNode(5, ListNode(6, ListNode(4, ListNode(1))))
 
-let s = Solution()
-dump(s.addTwoNumbers(a, b))
+Solution().addTwoNumbers(a, b)
 
