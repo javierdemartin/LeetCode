@@ -8,22 +8,46 @@ import Foundation
  */
 class Solution {
     
+    /**
+     Approach using XOR operations.
+     
+     Time complexity: O(N)
+     Space complexity: O(1)
+     */
     func missingNumber(_ nums: [Int]) -> Int {
-        return findMissing(nums)
+        
+        var missing: Int = 0
+        
+        for i in 1...nums.count {
+            missing ^= i
+        }
+        
+        for i in nums {
+            missing ^= i
+        }
+        
+        return missing
     }
     
-    func findMissing(_ array: [Int]) -> Int {
-        var result = 0
+    /**
+     Approach using sums.
+     
+     Time complexity: O(N)
+     Space complexity: O(1)
+     */
+    func missingNumber2(_ nums: [Int]) -> Int {
         
-        for i in 1...array.count {
-            result ^= i
+        var missing: Int = 0
+        
+        for i in 1...nums.count {
+            missing += i
         }
         
-        for value in array {
-            result ^= value
+        for i in nums {
+            missing -= i
         }
         
-        return result
+        return missing
     }
 }
 
