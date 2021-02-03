@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/lru-cache/
+/// https://leetcode.com/problems/lru-cache/
 
 import Foundation
 
@@ -10,9 +10,13 @@ import Foundation
  3. If the number of keys exceeds the capacity evict the least recently used key
  */
 class LRUCache {
-    
+
+    /// Actual cache that stores the key-value relations    
     var cache: [Int: Int] = [:]
+
     /// Queue to track the uses of the elements in the cache
+    /// Queue to track the usage of keys, least used elements will be moved to the back
+    /// and recently used ones will be inserted at index `0`
     var orderedCache: [Int]
     
     /// Defines the number of keys to store in the Cache
@@ -27,6 +31,9 @@ class LRUCache {
     /**
      Get the value from the given key.
      Update the key's cache by moving to the start the given key making it the most recently used.
+
+    Time complexity: O(Capacity)
+    Space complexity: O(Capacity)
      */
     func get(_ key: Int) -> Int {
         
@@ -39,7 +46,13 @@ class LRUCache {
         
         return -1
     }
-    
+   
+    /**
+    Add/Update the `value` for a given `key` and also updating the keys usage on the queue
+
+    Time complexity: O(Capacity)
+    Space complexity: O(Capacity)
+    */ 
     func put(_ key: Int, _ value: Int) {
         
         // Update the order of the used elements
@@ -58,8 +71,10 @@ class LRUCache {
     }
     
     /**
-     First element in the array is the most recently used. Once it's used via get/put it's removed from
-     whichever position it's located to the start.
+    Called every time a get/put operation is performed on the cache.
+
+    Searches for the index the current key is on the queue to move it to the first position 
+    marking it as the last recently used key. Least used elements will move backwards progresivelly.
      */
     func popAndPush(_ array: inout [Int], key: Int) {
         
