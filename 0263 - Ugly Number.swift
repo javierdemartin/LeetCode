@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/ugly-numer/
+// https://leetcode.com/problems/ugly-number/ 
 
 import Foundation
 

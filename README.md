@@ -15,173 +15,89 @@
 | Problem  | Category  | Difficulty  | Link  | 
 |---|---|---|---|
 | [0001 - Two Sum](https://leetcode.com/problems/two-sum/)  |  Array, Hash Table |  Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0013%20-%20Roman%20to%20Integer.swift)  |
-
 | [0002 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)  | Linked List, Math, Recursion	 |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0002%20-%20Add%20Two%20Numbers.swift)  |
-
 | [0003 - Longest Substring Without Repeating Characters](https://leetcode.com/problems/add-two-numbers/)  | Hash Table, Two Pointers, String, Sliding Window	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0003%20-%20Longest%20Substring%20Without%20Repeating%20Characters.swift)  |
-
 | [0004 - Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)  | Array, Binary Search, Divide and Conquer	 | Hard | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0004%20-%20Median%20of%20Two%20Sorted%20Arrays.swift)  |
-
 | [0007 - Reverse Integer](https://leetcode.com/problems/reverse-integer/)  | Math	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0007%20-%20Reverse%20Integer.swift)  |
-
 | [0008 - String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)  | Math, String	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0008%20-%20String%20to%20Integer%20(atoi).swift)  |
-
 | [0009 - Palindrome Number](https://leetcode.com/problems/palindrome-number/)  | Math	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0009%20-%20Palindrome%20Number.swift)  |
-
 | [0013 - Roman to Integer](https://leetcode.com/problems/roman-to-integer/)  | Math, String	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0013%20-%20Roman%20to%20Integer.swift)  |
-
 | [0014 - Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix)  | String	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0014%20-%20Longest%20Common%20Prefix.swift)  |
-
 | [0015 - 3Sum](https://leetcode.com/problems/3sum/)  | Array, Two Pointers 	 | Medium  | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0015%20-%203Sum.swift)  |
-
 | [0016 - 3Sum Closest](https://leetcode.com/problems/3sum-closest/)  | Array, Two Pointers	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0016%20-%203Sum%20Closest.swift)  |
-
 | [0017 - Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)  | String, Backtracking, Depth-first Search, Recursion 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0017%20-%20Letter%20Combinations%20of%20a%20Phone%20Number.swift)  |
-
 | [0019 - Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  | Linked List, Two Pointers	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0019%20-%20Remove%20Nth%20Node%20From%20End%20of%20List.swift)  |
-
 | [0020 - Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)  | String, Stack	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0020%20-%20Valid%20Parentheses.swift)  |
-
 | [0021 - Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)  | Linked List, Recursion 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0021%20-%20Merge%20Two%20Sorted%20Lists.swift)  |
-
 | [0023 - Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)  | 	Linked List, Divide and Conquer, Heap | Hard | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0023%20-%20Merge%20k%20Sorted%20Lists.swift)  |
-
 | [0024 - Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)  | Linked List, Recursion	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0024%20-%20Swap%20Nodes%20in%20Pairs.swift)  |
-
 | [0026 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  | Array, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0026%20-%20%20Remove%20Duplicates%20from%20Sorted%20Array.swift)  |
-
 | [0028 - Implement strStr()](https://leetcode.com/problems/implement-strstr)  | Two Pointers, String	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0028%20-%20Implement%20strStr().swift)  |
-
 | [0032 - Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)  | 	String, Dynamic Programming | Hard | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0032%20-%20Longest%20Valid%20Parentheses.swift)  |
-
 | [0033 - Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)  | 	Array, Binary Search | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0033%20-%20Search%20in%20Rotated%20Sorted%20Array.swift)  |
-
 | [0034 - Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  | Array, Binary Search	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0034%20-%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array.swift)  |
-
 | [0035 - Search Insert Position](https://leetcode.com/problems/search-insert-position)  | Array, Binary Search 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0035%20-%20Search%20Insert%20Position.swift)  |
-
 | [0036 - Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  | Hash Table	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0036%20-%20Valid%20Sudoku.swift)  |
-
 | [0038 - Count and Say](https://leetcode.com/problems/count-and-say/)  | String	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0038%20-%20Count%20and%20Say.swift)  |
-
 | [0048 - Rotate Image](https://leetcode.com/problems/rotate-image/)  | Array 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0048%20-%20Rotate%20Image.swift)  |
-
 | [0053 - Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | Array, Divide and Conquer, Dynamic Programming	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0053%20-%20Maximum%20Subarray.swift)  |
-
 | [0054 - Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)  | Array 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0054%20-%20Spiral%20Matrix.swift)  |
-
 | [0061 - Rotate List](https://leetcode.com/problems/rotate-list/)  | Linked List, Two Pointers 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0061%20-%20Rotate%20List.swift)  |
-
 | [0062 - Unique Paths](https://leetcode.com/problems/unique-paths/)  | Array, Dynamic Programming	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0062%20-%20Unique%20Paths.swift)  |
-
 | [0066 - Plus One](https://leetcode.com/problems/plus-one/)  | Array	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0066%20-%20Plus%20One.swift)  |
-
 | [0067 - Add Binary](https://leetcode.com/problems/add-binary/)  | Math, String 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0067%20-%20Add%20Binary.swift)  |
-
 | [0069 - Sqrt(x)](https://leetcode.com/problems/sqrtx/submissions/)  | Math, Binary Search	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0069%20-%20Sqrt(x).swift)  |
-
 | [0070 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)  | Dynamic Programming	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0070%20-%20Climbing%20Stairs.swift)  |
-
 | [0073 - Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)  | Array	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0073%20-%20Set%20Matrix%20Zeroes.swift)  |
-
 | [0074 - Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)  | Array, Binary Search, Array 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0074%20-%20Search%20a%202D%20Matrix.swift)  |
-
 | [0075 - Sort Colors](https://leetcode.com/problems/sort-colors)  | Array, Two Pointers, Sort	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0075%20-%20Sort%20Colors.swift)  |
-
 | [0083 - Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)  | Linked List	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0083%20-%20Remove%20Duplicates%20from%20Sorted%20List.swift)  |
-
 | [0088 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)  | Array, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0088%20-%20Merge%20Sorted%20Array.swift)  |
-
 | [0094 - Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)  | Hash Table, Stack, Tree	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0094%20-%20Binary%20Tree%20Inorder%20Traversal.swift)  |
-
 | [0100 - Same Tree](https://leetcode.com/problems/same-tree)  | Tree, Depth-first Search	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0100%20-%20Same%20Tree.swift)  |
-
 | [0101 - Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)  | Tree, Depth-first Search, Breadth-first Search	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0101%20-%20Symmetric%20Tree.swift)  |
-
 | [0102 - Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)  | Tree, Breadth-first Search	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0102%20-%20Binary%20Tree%20Level%20Order%20Traversal.swift)  |
-
 | [0104 - Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)  | Tree, Depth-first Search, Recursion	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0104%20-%20Maximum%20Depth%20of%20Binary%20Tree.swift)  |
-
 | [0106 - Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)  | Array, Tree, Depth-first Search	 | Hard | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0106%20-%20Construct%20Binary%20Tree%20from%20Inorder%20and%20Postorder%20Traversal.swift)  |
-
 | [0107 - Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii)  | Tree, Breadth-first Search	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0107%20-%20Binary%20Tree%20Level%20Order%20Traversal%20II.swift)  |
-
 | [0112 - Path Sum](https://leetcode.com/problems/path-sum/)  | Tree, Depth-first Search	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0112%20-%20Path%20Sum.swift)  |
-
 | [0113 - Path Sum II](https://leetcode.com/problems/path-sum-ii/)  | Tree, Depth-first Search	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0113%20-%20Path%20Sum%20II.swift)  |
-
 | [0118 - Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)  | Array	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0118%20-%20Pascal's%20Triangle.swift)  |
-
 | [0121 - Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  | Array, Dynamic Programming	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0121%20-%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.swift)  |
-
 | [0122 - Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)  | Array, Greedy	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0122%20-%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.swift)  |
-
 | [0125 - Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)  | Two Pointers, String 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0125%20-%20Valid%20Palindrome.swift)  |
-
 | [0128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)  | Array, Union Find	 | Hard | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0128%20-%20Longest%20Consecutive%20Sequence.swift)  |
-
 | [0136 - Single Number](https://leetcode.com/problems/single-number/)  | Hash Table, Bit Manipulation	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0136%20-%20Single%20Number.swift)  |
-
 | [0142 - Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)  | Linked List, Two Pointers 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0142%20-%20Linked%20List%20Cycle%20II.swift)  |
-
 | [0144 - Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)  | Stack, Tree	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0144%20-%20Binary%20Tree%20Preorder%20Traversal.swift)  |
-
 | [0145 - Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)  | 	Stack, Tree | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0145%20-%20Binary%20Tree%20Postorder%20Traversal.swift)  |
-
 | [0146 - LRU Cache](https://leetcode.com/problems/lru-cache/)  | Design 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0146%20-%20LRU%20Cache.swift)  |
-
 | [0148 - Sort List](https://leetcode.com/problems/sort-list/)  | Linked List, Sort 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0148%20-%20Sort%20List.swift)  |
-
 | [0155 - Min Stack](https://leetcode.com/problems/min-stack/)  | Stack, Design 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0155%20-%20Min%20Stack.swift)  |
-
 | [0160 - Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)  | Linked List	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0160%20-%20Intersection%20of%20Two%20Linked%20Lists.swift)  |
-
 | [0167 - Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  | Array, Two Pointers, Binary Search	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0167%20-%20Two%20Sum%20II%20-%20Input%20array%20is%20sorted.swift)  |
-
 | [0169 - Majority Element](https://leetcode.com/problems/majority-element)  | Array, Divide and Conquer, Bit Manipulation 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0169%20-%20Majority%20Element.swift)  |
-
 | [0189 - Rotate Array](https://leetcode.com/problems/rotate-array/)  | Array 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0189%20-%20Rotate%20Array.swift)  |
-
 | [0202 - Happy Number](https://leetcode.com/problems/happy-number/)  | Hash Table, Math 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0202%20-%20Happy%20Number.swift)  |
-
 | [0203 - Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)  | Linked List	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0203%20-%20Remove%20Linked%20List%20Elements.swift)  |
-
 | [0204 - Count Primes](https://leetcode.com/problems/count-primes/)  | Hash Table, Math 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0204%20-%20Count%20Primes.swift)  |
-
 | [0205 - Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)  | Hash Table	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0205%20-%20Isomorphic%20Strings.swift)  |
-
 | [0206 - Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)  | Linked List 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0206%20-%20Reverse%20Linked%20List.swift)  |
-
 | [0217 - Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | Array, Hash Table	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0217%20-%20Contains%20Duplicate.swift)  |
-
 | [0226 - Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)  | Tree 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0226%20-%20Invert%20Binary%20Tree.swift)  |
-
 | [0231 - Power of Two](https://leetcode.com/problems/power-of-two/)  | Math, Bit Manipulation 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0231%20-%20Power%20of%20Two.swift)  |
-
 | [0234 - Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)  | Linked List, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0234%20-%20Palindrome%20Linked%20List.swift)  |
-
 | [0237 - Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)  | Linked List	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0237%20-%20Delete%20Node%20in%20a%20Linked%20List.swift)  |
-
 | [0238 - Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)  | Array	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0238%20-%20Product%20of%20Array%20Except%20Self.swift)  |
-
 | [0242 - Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | Hash Table, Sort	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0242%20-%20Valid%20Anagram.swift)  |
-
 | [0250 - Count Univalue Subtrees](https://leetcode.com/problems/count-univalue-subtrees/)  | Tree	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0250%20-%20Count%20Univalue%20Subtrees.swift)  |
-
 | [0258 - Add Digits](https://leetcode.com/problems/add-digits/)  | Math 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0258%20-%20Add%20Digits.swift)  |
-
 | [0259 - 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)  | Array, Two Pointer 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0259%20-%203Sum%20Smaller.swift)  |
-
 | [0263 - Ugly Number.swift](https://leetcode.com/problems/ugly-number/)  | Math	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0263%20-%20Ugly%20Number.swift)  |
-
 | [0266 - Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)  | Hash Table	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0266%20-%20Palindrome%20Permutation.swift)  |
-
 | [0268 - Missing Number](https://leetcode.com/problems/missing-number/)  | Array, Math, Bit Manipulation 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0268%20-%20Missing%20Number.swift)  |
-
 | [0283 - Move Zeroes](https://leetcode.com/problems/move-zeroes/)  |  Hash Table, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0283%20-%20Move%20Zeroes.swift)  |
-
 | [0287 - Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  | 	Array, Two Pointers, Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0287%20-%20Find%20the%20Duplicate%20Number.swift)  |
-
 | []()  | 	 |  | [Solution]()  |
 
 | []()  | 	 |  | [Solution]()  |
