@@ -25,10 +25,9 @@
 
 An array is a collection of items stored in neighboring (contiguous) memory location. As they are stored together, checking through the entire collection of items is straightforward.
 
-* [Boyer-Moore algorithm](https://en.wikipedia.org/wiki/Boyer–Moore_majority_vote_algorithm): Find the majority of a sequence using linear time and constant space.
 
 <details>
-  <summary>Details</summary>
+  <summary>[Boyer-Moore algorithm](https://en.wikipedia.org/wiki/Boyer–Moore_majority_vote_algorithm): Find the majority of a sequence using linear time and constant space.</summary>
   
 ```swift
 var count = 0
@@ -456,6 +455,58 @@ tail?.next = head
 
 </details>
 
+<details>
+  <summary>Details</summary>
+  
+```swift
+func reverseList(_ head: ListNode?) -> ListNode? {
+
+    /// If `head == nil` no work to do, it's an empty linked list
+    /// If `head.next == nil` we have on item, return the head.
+    /// This marks the end of the downwards recursion. Base case as the single node is the reverse list
+    /// One node is the reversed list as the next value is nil
+    if head == nil  || head?.next == nil {
+        return head
+    }
+
+    /// Reverse the ret of the list not including me, paass the next node
+    /// This will not have a value until we get to tbe bottom of the list, last node
+    let reverseListHead = reverseList(head?.next)
+
+    /// Set the new head node's next node to be the previous head node which is now the end node
+    /// Set my next node's next to me
+    head?.next?.next = head
+
+    /// Set the old head node's next to `nil`, making it the end node for now
+    head?.next = nil
+
+    /// Return upwards the end of the list's head by the end
+    /// end recursion updwards adding each node itself to the reversed list while at the same time
+    /// passing the list's head up and up the chain
+    return reverseListHead
+}
+```
+
+<details>
+  <summary>Printing a Linked List's values in reverse</summary>
+  
+```swift
+func recurse(_ head: inout ListNode?) {
+    
+    var head = head
+    
+    if head != nil {
+        recurse(head?.next)
+        print("\(head!.val)")
+        head = head?.next
+    }
+}
+```
+
+  
+
+</details>
+
 
 
 ### Queues & Stacks
@@ -567,7 +618,8 @@ A **binary search tree** is a binary tree in which every node fits a specific or
 
 <details>
   <summary>Example</summary>  
-```
+  
+```swift
 Not complete   Complete
 Binary Tree    Binary Tree
     8            8
@@ -576,6 +628,7 @@ Binary Tree    Binary Tree
  / \   \     / \   /
 2   6  20	2  12 15	
 ```
+
 </details>
 
 **Full binary tree**: Every note has either zero or two children. No nodes have only one child.
@@ -589,7 +642,7 @@ General strategies to traverse a tree:
 * Depth First Search (DFS): Adop **depth** as the priority, so that one would start from a root and reach all the way down to a certain leaf, and then back to root to reach another branch. Can be further distinguished into three more orders depending on the relative order amongh the root, left and right nodes.
     * Preorder: `root.val + preorder(root.left) + preorder(root.right)`
     * Inorder: `inorder(root.left) + root.val + inorder(root.right)`. Visit the left branch, then the current node, and finally the right branch. 
-    * Postorder: `posorder(root.left) + postorder(root.right) + root.val`
+    * Postorder: `postorder(root.left) + postorder(root.right) + root.val`
     
 
 
@@ -598,38 +651,35 @@ General strategies to traverse a tree:
 <details>
   <summary>Breadth First Search</summary>
   
-```swift
 class Solution {
-    func levelOrderBottom(_ root: TreeNode?) -> [[Int]] {
+    func maxDepth(_ root: TreeNode?) -> Int {
         
-        var treeValues: [[Int]] = []
+        var depth = [[Int]]()
         
-        bfsTraverseTopToBottom(&treeValues, root, 0)
+        recursion(&depth, 0, root)
         
-        return treeValues.reversed()
+        return depth.count
     }
     
-    func bfsTraverseTopToBottom(_ depthLevels: inout [[Int]], _ tree: TreeNode?, _ level: Int) {
+    func recursion(_ depth: inout [[Int]], _ level: Int, _ l: TreeNode?) {
         
-        if tree == nil { return }
+        if l == nil { return }
         
-        if level == depthLevels.count {
-            depthLevels.append([])
+        if level == depth.count {
+            depth.append([])
         }
         
-        depthLevels[level].append(tree!.val)
+        depth[level].append(l!.val)
         
-        if tree?.left != nil {
-            bfsTraverseTopToBottom(&depthLevels, tree?.left, level + 1)
+        if l?.left != nil {
+            recursion(&depth, level + 1, l?.left)
         }
         
-        if tree?.right != nil {
-            bfsTraverseTopToBottom(&depthLevels, tree?.right, level + 1)
+        if l?.right != nil {
+            recursion(&depth, level + 1, l?.right)
         }
     }
 }
-```
-</details>
 
 
 
@@ -678,8 +728,6 @@ func postOrderTraversal(node: TreeNode) {
 A **min-heap** is a complete binary tree where each node is smaller than its children. The root is the minimum element in the tree.
 
 ```
-
-
      4           
    /   \      
   50    7     
@@ -713,6 +761,15 @@ Recursive solutions are built off of solutions to subproblems
 
 * **Bottom-up approach**: Know how to solve the problem for a simple case. Then figure out how to solve it for a more complex case.
 * **Top-down approach**: Think about how you can divide de problem  for case N into supbproblems
+
+#### Recursion
+
+Recursion is an approach to solving problems using a function that calls itself as a subroutine. By doing this the problem is reduced into subproblems. Recursion continues until it reaches a point where the subproblem can be solved without further recursion.
+
+Ending up in an infinite loop is quite common, to avoid this define the following properties:
+
+1. A **base case** which defines a scenario that does not use recursion to produce an answer.
+2. Rules that reduce the given cases towards the base case, **recurrence relation**
 
 ### Sorting and Searching
 
