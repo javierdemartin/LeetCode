@@ -1,5 +1,6 @@
 
-[ ] How to transform break a cricle in  alinked list
+> All problems, resources and property is to be attributed to each source. This is nothing more than a personal resource to study and to share solutions with other individuals.
+
 
 <details>
   <summary>Details</summary>
