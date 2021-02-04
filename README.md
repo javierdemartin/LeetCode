@@ -102,7 +102,7 @@
 | [0287 - Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  | 	Array, Two Pointers, Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0287%20-%20Find%20the%20Duplicate%20Number.swift)  |
 | [0911 - Online Election](https://leetcode.com/problems/online-election/)  | Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0911%20-%20Online%20Election.swift)  |
 | [1094 - Car Pooling](https://leetcode.com/problems/car-pooling/)  | 	Greedy | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/1094%20-%20Car%20Pooling.swift)  |
-| []()  | 	 |  | [Solution]()  |
+| [1275 - Find Winner on a Tic Tac Toe Game](https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/)  | Array	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/1275%20-%20Find%20Winner%20on%20a%20Tic%20Tac%20Toe%20Game.swift)  |
 | []()  | 	 |  | [Solution]()  |
 | []()  | 	 |  | [Solution]()  |
 | []()  | 	 |  | [Solution]()  |
