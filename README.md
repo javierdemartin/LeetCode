@@ -100,6 +100,7 @@
 | [0268 - Missing Number](https://leetcode.com/problems/missing-number/)  | Array, Math, Bit Manipulation 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0268%20-%20Missing%20Number.swift)  |
 | [0283 - Move Zeroes](https://leetcode.com/problems/move-zeroes/)  |  Hash Table, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0283%20-%20Move%20Zeroes.swift)  |
 | [0287 - Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  | 	Array, Two Pointers, Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0287%20-%20Find%20the%20Duplicate%20Number.swift)  |
+| [0911 - Online Election](https://leetcode.com/problems/online-election/)  | Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0911%20-%20Online%20Election.swift)  |
 | [1094 - Car Pooling](https://leetcode.com/problems/car-pooling/)  | 	Greedy | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/1094%20-%20Car%20Pooling.swift)  |
 | []()  | 	 |  | [Solution]()  |
 | []()  | 	 |  | [Solution]()  |
