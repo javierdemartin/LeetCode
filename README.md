@@ -91,6 +91,7 @@
 | [0238 - Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)  | Array	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0238%20-%20Product%20of%20Array%20Except%20Self.swift)  |
 | [0242 - Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | Hash Table, Sort	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0242%20-%20Valid%20Anagram.swift)  |
 | [0250 - Count Univalue Subtrees](https://leetcode.com/problems/count-univalue-subtrees/)  | Tree	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0250%20-%20Count%20Univalue%20Subtrees.swift)  |
+| [0253 - Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)  | Heap, Greedy, Sort	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0253%20-%20Meeting%20Rooms%20II.swift)  |
 | [0258 - Add Digits](https://leetcode.com/problems/add-digits/)  | Math 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0258%20-%20Add%20Digits.swift)  |
 | [0259 - 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)  | Array, Two Pointer 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0259%20-%203Sum%20Smaller.swift)  |
 | [0263 - Ugly Number.swift](https://leetcode.com/problems/ugly-number/)  | Math	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0263%20-%20Ugly%20Number.swift)  |
