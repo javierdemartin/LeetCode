@@ -2,8 +2,11 @@
 
 import Foundation
 
+/**
+ Keep track of the different times a word appears on a String using a dictionary which value is an array of indexes
+ */
 class WordDistance {
-
+    
     /// For any given `key` store all the indexes in which the `key` appears on the given input
     var wordsD: [String: [Int]] = [:]
     
