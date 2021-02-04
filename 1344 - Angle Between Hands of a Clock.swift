@@ -2,20 +2,24 @@
 
 import Foundation
 
-class Solution {
+/**
+ Time complexity: O(1)
+ Space complexity: O(1)
+ */
+class Solution {class Solution {
+    
+    private let minOffset = Double(360 / 60)
+    private let hourOffset = Double(360 / 12)
+    
     func angleClock(_ hour: Int, _ minutes: Int) -> Double {
         
-        var hour: Double = Double(hour)
-        var minutes: Double = Double(minutes)
-        
-        let hourIncrement: Double = 360/12
-        let minIncrement: Double = 360/60
-        
-        let minAngle = minIncrement * minutes
-        let hourAngle = (hour.truncatingRemainder(dividingBy: 12.0) + minutes / 60.0) * hourIncrement
+        var minAngle = minOffset * Double(minutes)
+        var hourAngle = hourOffset * Double(hour) + hourOffset * Double(minutes) / 60
+
+        hourAngle = hourAngle.truncatingRemainder(dividingBy: 360.0)
         
         let diff = abs(hourAngle - minAngle)
         
-        return min(diff, 360.0 - diff)
+        return min(360 - diff, diff)
     }
 }
