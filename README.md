@@ -39,6 +39,7 @@
 | [0035 - Search Insert Position](https://leetcode.com/problems/search-insert-position)  | Array, Binary Search 	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0035%20-%20Search%20Insert%20Position.swift)  |
 | [0036 - Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  | Hash Table	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0036%20-%20Valid%20Sudoku.swift)  |
 | [0038 - Count and Say](https://leetcode.com/problems/count-and-say/)  | String	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0038%20-%20Count%20and%20Say.swift)  |
+| [0042 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  | Array, Two Pointers, Dynamic Programming, Stack	 | Hard | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0042%20-%20Trapping%Rain%20Water.swift)  |
 | [0048 - Rotate Image](https://leetcode.com/problems/rotate-image/)  | Array 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0048%20-%20Rotate%20Image.swift)  |
 | [0053 - Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | Array, Divide and Conquer, Dynamic Programming	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0053%20-%20Maximum%20Subarray.swift)  |
 | [0054 - Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)  | Array 	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0054%20-%20Spiral%20Matrix.swift)  |
@@ -101,14 +102,16 @@
 | [0283 - Move Zeroes](https://leetcode.com/problems/move-zeroes/)  |  Hash Table, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0283%20-%20Move%20Zeroes.swift)  |
 | [0287 - Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  | 	Array, Two Pointers, Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0287%20-%20Find%20the%20Duplicate%20Number.swift)  |
 | [0328 - Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)  |  Linked List	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0328%20-%20Odd%20Even%20Linked%20List.swift)  |
-| [0349 - Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)  | Hash Table, Two Pointers, Binary Search, Sort	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0349%20-%20Odd%20Intersection%20of%20Two%20Arrays.swift)  |
+| [0349 - Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)  | Hash Table, Two Pointers, Binary Search, Sort	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0349%20-%20Intersection%20of%20Two%20Arrays.swift)  |
 | [0445 - Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/solution/)  | Linked List 	 | Medium  | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0445%20-%20Add%20Two%20Numbers%20II.swift)  |
 | [0911 - Online Election](https://leetcode.com/problems/online-election/)  | Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0911%20-%20Online%20Election.swift)  |
 | [0977 - Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)  | Array, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0977%20-%20Squares%20of%20a%20Sorted%20Array.swift)  |
 | [1094 - Car Pooling](https://leetcode.com/problems/car-pooling/)  | 	Greedy | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/1094%20-%20Car%20Pooling.swift)  |
 | [1275 - Find Winner on a Tic Tac Toe Game](https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/)  | Array	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/1275%20-%20Find%20Winner%20on%20a%20Tic%20Tac%20Toe%20Game.swift)  |
 | [1344 - Angle Between Hands of a Clock](https://leetcode.com/problems/angle-between-hands-of-a-clock/)  | Math	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/1344%20-%20Angle%20Between%20Hands%20of%20a%20Clock.swift)  |
-
+| []()  | 	 |  | [Solution]()  |
+| []()  | 	 |  | [Solution]()  |
+| []()  | 	 |  | [Solution]()  |
 | []()  | 	 |  | [Solution]()  |
 
 
