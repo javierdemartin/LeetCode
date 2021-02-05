@@ -19,8 +19,39 @@ import Foundation
  And as we want the **maximum** we keep on calculating the sum with the rest of the array.
  */
 class Solution {
-    func maxSubArray(_ nums: [Int]) -> Int {
     
+    /**
+     This is probably going to be the solution that you will come up with. Uses sliding window to compute all the possible combinations.
+     
+     Time complexity: O(N^2)
+     Space complexity: O(1)
+     */
+    func maxSubArray(_ nums: [Int]) -> Int {
+        
+        if nums.count == 1 { return nums[0] }
+        
+        var maxSum = Int.min
+        
+        for len in (1...nums.count).reversed() {
+            
+            for i in 0...(nums.count - len) {
+                
+                let sub = nums[i..<i+len]
+                let subSum = sub.reduce(0,+)
+                // print(sub, subSum)
+                
+                if subSum > maxSum { maxSum = subSum }
+                
+                
+                
+            }
+        }
+        
+        return maxSum
+    }
+    
+    func maxSubArray2(_ nums: [Int]) -> Int {
+        
         var maxSub = nums[0]
         var currSum = nums[0]
         
@@ -36,7 +67,7 @@ class Solution {
             
             maxSub = max(currSum, maxSub)
         }
-
+        
         return maxSub
     }
 }
