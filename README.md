@@ -105,6 +105,7 @@
 | [0283 - Move Zeroes](https://leetcode.com/problems/move-zeroes/)  |  Hash Table, Two Pointers	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0283%20-%20Move%20Zeroes.swift)  |
 | [0287 - Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  | 	Array, Two Pointers, Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0287%20-%20Find%20the%20Duplicate%20Number.swift)  |
 | [0328 - Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)  |  Linked List	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0328%20-%20Odd%20Even%20Linked%20List.swift)  |
+| [0341 - Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/)  | Stack, Design	 | Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0341%20-%20Flatten%20Nested%20List%20Iterator.swift)  |
 | [0349 - Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)  | Hash Table, Two Pointers, Binary Search, Sort	 | Easy | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0349%20-%20Intersection%20of%20Two%20Arrays.swift)  |
 | [0445 - Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/solution/)  | Linked List 	 | Medium  | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0445%20-%20Add%20Two%20Numbers%20II.swift)  |
 | [0911 - Online Election](https://leetcode.com/problems/online-election/)  | Binary Search |  Medium | [Solution](https://github.com/javierdemartin/LeetCode-Swift/blob/master/0911%20-%20Online%20Election.swift)  |
@@ -607,7 +608,19 @@ func recurse(_ head: inout ListNode?) {
 
 </details>
 
+### Graphs and Trees
 
+```swift
+public class Node {
+    public var val: Int
+    public var neighbors: [Node?]
+    public init(_ val: Int) {
+        self.val = val
+        self.neighbors = []
+    }
+}
+```
+> Graph implementation
 
 ### Queues & Stacks
 
