@@ -3,56 +3,53 @@
 import Foundation
 
 /**
- - time complexity: O(N)
- - space complexity O(N+1)
- */
-
+Time complexity: O(N)
+Space complexity: O(N)
+*/
 class Solution {
      func plusOne(_ digits: [Int]) -> [Int] {
          
          var digits = digits
          
+         /// Reverse numbers in place
+         for i in 0..<digits.count/2 {
+             let temp = digits[i]
+             digits[i] = digits[digits.count - 1 - i]
+            digits[digits.count - 1 - i] = temp
+         }
          
-        if digits[digits.count - 1] < 9 {
-            digits[digits.count - 1] += 1
+         
+         var carry = 1
+         var idx = 0
+         
+        while carry != 0 && idx < digits.count - 1 {
             
-            return digits
+            let sum = digits[idx] + carry
+            
+            carry = sum / 10
+            
+            digits[idx] = sum % 10
+                        
+            idx += 1
         }
-        
-        var carry = true
-        
-        digits[digits.count - 1] = 0
-        
-//        digits[digits.count - 1] = 0
-        
-        for i in 1..<digits.count {
-            
-            print(digits)
-            
-            if carry == false { break }
-            
-            let n = digits[digits.count - i - 1]
-            
-            if n < 9 {
-                digits[digits.count - i - 1] += 1
-                carry = false
-            } else {
-                digits[digits.count - i - 1] = 0
-                carry = true
-            }
+         
+         /// Add the possible missing carry
+        if carry != 0 && digits[idx] > 8 {
+            print("YOO")
+            digits[idx] = 0
+            digits.append(carry)
+        } else if carry != 0 {
+            digits[idx] += 1
         }
-        
-        
-        if carry {
-            digits = [1] + digits
-        }
-        
+         
+
+        /// Reverse numbers in place         
+         for i in 0..<digits.count/2 {
+             let temp = digits[i]
+             digits[i] = digits[digits.count - 1 - i]
+            digits[digits.count - 1 - i] = temp
+         }
          
          return digits
      }
  }
- 
-// Solution().plusOne([1,2,3])
-// Solution().plusOne([1,9,9])
-Solution().plusOne([9,9])
-
