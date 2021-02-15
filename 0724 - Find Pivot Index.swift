@@ -2,52 +2,26 @@
 
 import Foundation
 
+/**
+ Compute the total sum of the array. Travel the array from left to right keeping track of the left sum
+ and checking if it matches.
+ 
+ Time complexity: O(N)
+ Space complexity: O(1)
+ */
 class Solution {
     func pivotIndex(_ nums: [Int]) -> Int {
+        let total = nums.reduce(0, +)
         
-        var leftSum = [Int: Int]()
-        var rightSum = [Int: Int]()
+        var leftSum = 0
         
-        
-        for (index, value) in nums.enumerated() {
+        for (i,x) in nums.enumerated() {
             
-            let leftSide = Array(nums[0...index])
-            let rightSide = Array(nums[index..<nums.count])
+            if leftSum == (total - leftSum - x) { return i }
             
-            // 2
-            if let prevSum = leftSum[index - 1], let prevSumRight = rightSum[index - 1] {
-                leftSum[index] = prevSum + value
-                rightSum[index] = prevSumRight - nums[index - 1]
-            } else {
-                leftSum[index] = value
-                rightSum[index] = sumArray(rightSide)
-            }
+            leftSum  += x
         }
         
-        dump(leftSum)
-        dump(rightSum)
-        
-        // 3.
-        for (index, _) in nums.enumerated() {
-
-            if let left = leftSum[index], let right = rightSum[index], left == right {
-                return index
-            }
-        }
-        
-        // 4.
         return -1
-    }
-    
-    func sumArray(_ array: [Int]) -> Int {
-        
-        var tempSum = 0
-        
-        for i in array {
-            
-            tempSum += i
-        }
-        
-        return tempSum
     }
 }
