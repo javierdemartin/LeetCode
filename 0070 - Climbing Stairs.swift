@@ -25,6 +25,32 @@ class Solution {
     }
 }
 
+/**
+ Time complexity: O(N)
+ Space complexity: O(N)
+ */
+class SolutionMemoization {
+    
+    var cache: [Int:Int] = [:]
+    
+    func climbStairs(_ n: Int) -> Int {
+        return helper(0, n)
+    }
+    
+    func helper(_ i: Int, _ n: Int) -> Int {
+        if i > n { return 0 }
+        if i == n { return 1 }
+        
+        if let val = cache[i], val > 0 {
+            return val
+        }
+        
+        cache[i] = helper(i+1, n) + helper(i+2, n)
+        
+        return cache[i]!
+    }
+}
+
 let s = Solution()
 s.climbStairs(15)
 
