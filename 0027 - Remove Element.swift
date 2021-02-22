@@ -3,7 +3,7 @@
 import Foundation
 
 /**
-Use two pointers: slow and fast. Use the fast pointer to skip unwanted elements in the final array.
+Essential exercise to learn about an array's capacity and length.
 
 Time complexity: O(N)
 Space complexity: O(1)
