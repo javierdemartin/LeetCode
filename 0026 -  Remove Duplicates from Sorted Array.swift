@@ -2,37 +2,35 @@
 
 import Foundation
 
+/**
+Rather than looking for elements that are equal look for the point where they differ.
+
+Use two pointers
+- `i` will traverse the array in a normal way, fast runner
+- `counter` will take into account the number of non-duplicates, slow runner
+
+As the fast runner advances compare its value against the slow runner. Continue while no
+duplicate is found. When the duplicate run ends increment the slow pointer, `counter` to
+skip the duplicate and copy its value.
+
+Time complexity: O(N)
+Space complexity: O(1)
+*/
 class Solution {
-    
     func removeDuplicates(_ nums: inout [Int]) -> Int {
-     
+        
         if nums.isEmpty { return 0 }
         
-        // Slow pointer
-        var i = 0
+        var count = 0
         
-        // j is the fast pointer
-        for j in 1..<nums.count {
+        for i in 1..<nums.count {
             
-            // Copy the non duplicated item to the i+1 position
-            if nums[i] != nums[j] {
-                
-                i += 1
-                
-                
-                nums[i] = nums[j]
+            if nums[i] != nums[count] {
+                count += 1
+                nums[count] = nums[i]
             }
-            
-            // If both elements are the same increase j to skip the duplicate
         }
         
-        return i + 1
+        return count + 1
     }
-
 }
-
-var a = [1,1,2,3,4,5]
-
-let s = Solution()
-s.removeDuplicates(&a)
-
